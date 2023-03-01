@@ -2,6 +2,14 @@ import { createReadStream, createWriteStream } from "fs";
 import { Transform, TransformCallback } from "stream";
 const JSONStream = require("JSONStream");
 
+interface Countries {
+  id: number;
+  first_name: string;
+  last_name: string;
+  country: string;
+}
+
+// interface for chunk argument in _transform method from Modify class
 interface Model {
   id: number;
   first_name: string;
@@ -11,13 +19,7 @@ interface Model {
   ip_address: string;
 }
 
-interface Countries {
-  id: number;
-  first_name: string;
-  last_name: string;
-  country: string;
-}
-
+//check chunk type validity ???
 class Modify extends Transform {
   _transform(
     chunk: Model,
