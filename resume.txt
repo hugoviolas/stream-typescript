@@ -1,0 +1,6 @@
+No errors emitted,
+Data drain: 0,
+BigData.json transformed,
+Drain: 5,
+Pause: 12,
+Hugo.json transformed.
